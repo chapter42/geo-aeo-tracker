@@ -29,7 +29,7 @@ Decimal phases appear between their surrounding integers in numeric order.
   5. The password is read from the SITE_PASSWORD environment variable — no hardcoded values exist in source
 **Plans:** 2 plans
 Plans:
-- [ ] 01-01-PLAN.md — Auth foundation: jose install, lib/auth.ts session utilities, login API endpoint, env config
+- [x] 01-01-PLAN.md — Auth foundation: jose install, lib/auth.ts session utilities, login API endpoint, env config
 - [ ] 01-02-PLAN.md — Auth gate: proxy.ts request interceptor, login page UI, end-to-end verification
 
 ### Phase 2: Login UX
@@ -48,5 +48,5 @@ Phases execute in numeric order: 1 → 2
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Core Auth Gate | 0/2 | Planning complete | - |
+| 1. Core Auth Gate | 1/2 | In progress | - |
 | 2. Login UX | 0/TBD | Not started | - |
