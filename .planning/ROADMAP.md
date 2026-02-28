@@ -41,12 +41,27 @@ Plans:
   2. The login form is visually distinct from a bare browser default (styled inputs, button, error state)
 **Plans**: TBD
 
+### Phase 3: Bulk Prompt Import
+**Goal**: Users can paste multiple prompts at once (one per line) in the Prompt Hub tab instead of adding them one-by-one, with automatic deduplication and summary feedback
+**Depends on**: Nothing (independent feature, no auth dependency)
+**Requirements**: BULK-01
+**Success Criteria** (what must be TRUE):
+  1. A "Bulk Import" button appears next to the existing "Add" button in the Prompt Hub tab
+  2. Clicking it toggles a textarea where users can paste multiple prompts (one per line)
+  3. Duplicate prompts are silently skipped with a summary showing added/skipped counts
+  4. Empty lines and whitespace are automatically cleaned
+  5. No changes to PromptHubTabProps interface (zero upstream impact)
+**Plans:** 1 plan
+Plans:
+- [ ] 03-01-PLAN.md — Bulk import UI: toggle button, textarea, parsing/dedup logic, summary feedback
+
 ## Progress
 
 **Execution Order:**
-Phases execute in numeric order: 1 → 2
+Phases execute in numeric order: 1 → 2 → 3
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Core Auth Gate | 2/2 | Complete | 2026-02-28 |
 | 2. Login UX | 0/TBD | Not started | - |
+| 3. Bulk Prompt Import | 0/1 | Not started | - |
