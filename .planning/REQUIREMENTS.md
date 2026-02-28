@@ -7,12 +7,12 @@
 
 ### Authentication Gate
 
-- [ ] **AUTH-01**: All page requests are intercepted by proxy and redirected to /login if no valid session cookie exists
+- [x] **AUTH-01**: All page requests are intercepted by proxy and redirected to /login if no valid session cookie exists
 - [x] **AUTH-02**: User can enter shared password on /login page and receive a signed session cookie on success
 - [x] **AUTH-03**: Session cookie is encrypted, httpOnly, secure, and SameSite=lax
 - [x] **AUTH-04**: Password is read from `SITE_PASSWORD` environment variable (no hardcoded values)
-- [ ] **AUTH-05**: API routes (/api/scrape, /api/audit, /api/analyze) independently verify session cookie (defense-in-depth)
-- [ ] **AUTH-06**: Static assets (_next/static, _next/image, favicon) are excluded from auth check
+- [x] **AUTH-05**: API routes (/api/scrape, /api/audit, /api/analyze) independently verify session cookie (defense-in-depth)
+- [x] **AUTH-06**: Static assets (_next/static, _next/image, favicon) are excluded from auth check
 - [ ] **AUTH-07**: Login page uses existing Tailwind dark theme to match app aesthetic
 
 ### Fork Compatibility
@@ -41,12 +41,12 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| AUTH-01 | Phase 1 | Pending |
+| AUTH-01 | Phase 1 | Complete |
 | AUTH-02 | Phase 1 | Complete (01-01) |
 | AUTH-03 | Phase 1 | Complete (01-01) |
 | AUTH-04 | Phase 1 | Complete (01-01) |
-| AUTH-05 | Phase 1 | Pending |
-| AUTH-06 | Phase 1 | Pending |
+| AUTH-05 | Phase 1 | Complete |
+| AUTH-06 | Phase 1 | Complete |
 | AUTH-07 | Phase 2 | Pending |
 | FORK-01 | Phase 1 | Complete (01-01) |
 | FORK-02 | Phase 1 | Complete (01-01) |

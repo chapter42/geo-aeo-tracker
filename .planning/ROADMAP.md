@@ -12,7 +12,7 @@ This project adds a shared-password gate to an existing Next.js 16 App Router ap
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Core Auth Gate** - Fully working password gate with defense-in-depth API protection and zero upstream file modifications
+- [x] **Phase 1: Core Auth Gate** - Fully working password gate with defense-in-depth API protection and zero upstream file modifications
 - [ ] **Phase 2: Login UX** - Styled login page matching the app's existing Tailwind dark theme
 
 ## Phase Details
@@ -30,7 +30,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans:** 2 plans
 Plans:
 - [x] 01-01-PLAN.md — Auth foundation: jose install, lib/auth.ts session utilities, login API endpoint, env config
-- [ ] 01-02-PLAN.md — Auth gate: proxy.ts request interceptor, login page UI, end-to-end verification
+- [x] 01-02-PLAN.md — Auth gate: proxy.ts request interceptor, login page UI, end-to-end verification
 
 ### Phase 2: Login UX
 **Goal**: The login page looks like it belongs to the app — dark theme, consistent styling — so the user experience is cohesive from first visit
@@ -48,5 +48,5 @@ Phases execute in numeric order: 1 → 2
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Core Auth Gate | 1/2 | In progress | - |
+| 1. Core Auth Gate | 2/2 | Complete | 2026-02-28 |
 | 2. Login UX | 0/TBD | Not started | - |
