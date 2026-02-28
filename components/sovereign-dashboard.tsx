@@ -1436,28 +1436,6 @@ Now analyze all ${competitorList.length} competitors:`,
           })}
         </nav>
 
-        {/* Bright Data CTA */}
-        <div className="border-t border-th-border px-3 py-3">
-          <a
-            href="https://brightdata.com/?utm_source=geo-tracker-os"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group flex flex-col items-center gap-2 rounded-xl bg-gradient-to-br from-[#1a6dff] via-[#3b82f6] to-[#6366f1] px-4 py-4 shadow-lg transition-all hover:shadow-xl hover:brightness-110"
-          >
-            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white/20">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-            </div>
-            <div className="text-center">
-              <div className="text-sm font-bold text-white">Powered by Bright Data</div>
-              <div className="mt-0.5 text-xs text-white/70">Web data infrastructure for AI</div>
-            </div>
-            <div className="flex items-center gap-1.5 rounded-lg bg-white/15 px-3 py-1.5 text-xs font-medium text-white transition-colors group-hover:bg-white/25">
-              Learn more
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            </div>
-          </a>
-        </div>
-
         {/* Footer info */}
         <div className="border-t border-th-border px-4 py-2 text-center text-xs leading-relaxed text-th-text-muted">
           <div>{demoMode ? "Read-only demo" : `Local-first · ${workspaces.length} workspace${workspaces.length > 1 ? "s" : ""}`}</div>
