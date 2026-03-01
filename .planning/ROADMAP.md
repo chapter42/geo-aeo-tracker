@@ -51,7 +51,7 @@ Plans:
   3. Duplicate prompts are silently skipped with a summary showing added/skipped counts
   4. Empty lines and whitespace are automatically cleaned
   5. No changes to PromptHubTabProps interface (zero upstream impact)
-**Plans:** 1 plan
+**Plans:** 1/1 plans complete
 Plans:
 - [ ] 03-01-PLAN.md — Bulk import UI: toggle button, textarea, parsing/dedup logic, summary feedback
 
@@ -64,4 +64,4 @@ Phases execute in numeric order: 1 → 2 → 3
 |-------|----------------|--------|-----------|
 | 1. Core Auth Gate | 2/2 | Complete | 2026-02-28 |
 | 2. Login UX | 0/TBD | Not started | - |
-| 3. Bulk Prompt Import | 0/1 | Not started | - |
+| 3. Bulk Prompt Import | 1/1 | Complete   | 2026-03-01 |

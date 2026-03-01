@@ -5,33 +5,34 @@
 See: .planning/PROJECT.md (updated 2026-02-28)
 
 **Core value:** The whole app is gated behind a shared password — no unauthenticated access to any page or API route
-**Current focus:** Phase 1 — Core Auth Gate
+**Current focus:** Phase 3 complete — bulk prompt import delivered
 
 ## Current Position
 
-Phase: 1 of 2 (Core Auth Gate)
-Plan: 2 of 2 in current phase (Phase 1 complete)
-Status: Phase 1 complete — ready for Phase 2
-Last activity: 2026-02-28 — Plan 01-02 completed
+Phase: 3 of 3 (Bulk Prompt Import)
+Plan: 1 of 1 in current phase (Phase 3 complete)
+Status: Phase 3 complete — all phases done
+Last activity: 2026-03-01 — Plan 03-01 completed
 
-Progress: [██████░░░░] 50%
+Progress: [██████████] 100%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 2
-- Average duration: 4min
-- Total execution time: 7min
+- Total plans completed: 3
+- Average duration: 6min
+- Total execution time: 17min
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 01-core-auth-gate | 2 | 7min | 4min |
+| 03-bulk-prompt-import | 1 | 10min | 10min |
 
 **Recent Trend:**
-- Last 5 plans: 2min, 5min
-- Trend: Baseline
+- Last 5 plans: 2min, 5min, 10min
+- Trend: Stable
 
 *Updated after each plan completion*
 
@@ -55,17 +56,26 @@ Recent decisions affecting current work:
 - [01-02]: API routes return 401 JSON (not redirect) — machine clients expect JSON, not HTML redirect
 - [01-02]: Client-side router.push() after login — avoids Set-Cookie race condition on server 302 (Pitfall 6 resolved)
 - [01-02]: Only /login and /api/auth/login bypass auth — _next/data NOT excluded (would expose API data routes)
+- [03-01]: No file upload — textarea only for bulk import (user decision)
+- [03-01]: No preview step — prompts added immediately on "Add All" click (user decision)
+- [03-01]: No maximum prompt limit — accept any number of lines (user decision)
+- [03-01]: Duplicates silently skipped with Dutch summary counts, not per-line errors (user decision)
+- [03-01]: Dutch singular/plural: "1 duplicaat" vs "N duplicaten" (auto-fixed during Task 1)
 
 ### Pending Todos
 
 None.
 
+### Roadmap Evolution
+
+- Phase 3 added: onderzoek de mogelijkheid tot een een bulkupload van prompts
+
 ### Blockers/Concerns
 
-None — Phase 1 complete. Cookie race condition (Pitfall 6) resolved via client-side redirect in login page.
+None — all phases complete.
 
 ## Session Continuity
 
-Last session: 2026-02-28
-Stopped at: Completed 01-02-PLAN.md — auth gate complete (proxy.ts, app/login/page.tsx, human-verified end-to-end)
+Last session: 2026-03-01
+Stopped at: Completed 03-01-PLAN.md — bulk prompt import complete (PromptHubTab updated, human-verified end-to-end)
 Resume file: None
