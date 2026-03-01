@@ -898,7 +898,7 @@ export function SovereignDashboard({ demoMode = false }: { demoMode?: boolean } 
     if (!cleaned) return;
     setState((prev) => {
       if (prev.customPrompts.includes(cleaned)) return prev;
-      return { ...prev, customPrompts: [cleaned, ...prev.customPrompts].slice(0, 50) };
+      return { ...prev, customPrompts: [cleaned, ...prev.customPrompts] };
     });
     setMessage("Tracking prompt added.");
   }

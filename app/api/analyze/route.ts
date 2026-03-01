@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
+import { verifySession } from "@/lib/auth";
 
 export const runtime = "edge";
 
@@ -13,6 +14,11 @@ const bodySchema = z.object({
 const cache = new Map<string, { expiresAt: number; text: string }>();
 
 export async function POST(req: NextRequest) {
+  const session = await verifySession();
+  if (!session) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
+
   try {
     const parsed = bodySchema.parse(await req.json());
     const cacheKey = JSON.stringify({ prompt: parsed.prompt, maxTokens: parsed.maxTokens, temperature: parsed.temperature });
