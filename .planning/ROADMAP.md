@@ -68,7 +68,7 @@ Plans:
   3. The login page is visually distinct from a bare browser default
 **Plans:** 1 plan
 Plans:
-- [ ] 04-01-PLAN.md — Restyle login page: replace hardcoded gray/blue Tailwind classes with bd-panel, bd-input, bd-btn-primary, and text-th-* tokens
+- [x] 04-01-PLAN.md — Restyle login page: replace hardcoded gray/blue Tailwind classes with bd-panel, bd-input, bd-btn-primary, and text-th-* tokens
 
 ### Phase 5: API Defense-in-Depth & Prompt Cap Fix
 **Goal**: API route handlers independently verify session cookies (true defense-in-depth beyond proxy), and the 50-prompt cap is removed to match BULK-01's "no limit" requirement
@@ -91,5 +91,5 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | 1. Core Auth Gate | 2/2 | Complete | 2026-02-28 |
 | 2. Login UX | 0/TBD | Not started | - |
 | 3. Bulk Prompt Import | 1/1 | Complete   | 2026-03-01 |
-| 4. Login Page Styling | 0/1 | Not started | - |
+| 4. Login Page Styling | 1/1 | Complete | 2026-03-01 |
 | 5. API Defense & Prompt Cap | 0/TBD | Not started | - |

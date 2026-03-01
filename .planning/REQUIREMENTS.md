@@ -13,7 +13,7 @@
 - [x] **AUTH-04**: Password is read from `SITE_PASSWORD` environment variable (no hardcoded values)
 - [ ] **AUTH-05**: API routes (/api/scrape, /api/audit, /api/analyze) independently verify session cookie (defense-in-depth)
 - [x] **AUTH-06**: Static assets (_next/static, _next/image, favicon) are excluded from auth check
-- [ ] **AUTH-07**: Login page uses existing Tailwind dark theme to match app aesthetic
+- [x] **AUTH-07**: Login page uses existing Tailwind dark theme to match app aesthetic
 
 ### Fork Compatibility
 
@@ -47,7 +47,7 @@
 | AUTH-04 | Phase 1 | Complete (01-01) |
 | AUTH-05 | Phase 5 (gap closure) | Pending |
 | AUTH-06 | Phase 1 | Complete |
-| AUTH-07 | Phase 4 (gap closure) | Pending |
+| AUTH-07 | Phase 4 (gap closure) | Complete (04-01) |
 | FORK-01 | Phase 1 | Complete (01-01) |
 | FORK-02 | Phase 1 | Complete (01-01) |
 | BULK-01 | Phase 3, Phase 5 (gap closure) | Partial — cap fix pending |
@@ -56,9 +56,9 @@
 - v1 requirements: 10 total
 - Mapped to phases: 10
 - Unmapped: 0
-- Satisfied: 7
-- Pending: 3 (AUTH-05, AUTH-07, BULK-01 cap fix)
+- Satisfied: 8
+- Pending: 2 (AUTH-05, BULK-01 cap fix)
 
 ---
 *Requirements defined: 2026-02-28*
-*Last updated: 2026-02-28 after 01-01 completion (AUTH-02, AUTH-03, AUTH-04, FORK-01, FORK-02 complete)*
+*Last updated: 2026-03-01 after 04-01 completion (AUTH-07 complete)*
