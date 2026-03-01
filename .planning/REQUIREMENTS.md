@@ -50,15 +50,15 @@
 | AUTH-07 | Phase 4 (gap closure) | Complete (04-01) |
 | FORK-01 | Phase 1 | Complete (01-01) |
 | FORK-02 | Phase 1 | Complete (01-01) |
-| BULK-01 | Phase 3, Phase 5 (gap closure) | Partial — cap fix pending |
+| BULK-01 | Phase 3, Phase 5 (gap closure) | Complete (05-01) |
 
 **Coverage:**
 - v1 requirements: 10 total
 - Mapped to phases: 10
 - Unmapped: 0
-- Satisfied: 8
-- Pending: 2 (AUTH-05, BULK-01 cap fix)
+- Satisfied: 10
+- Pending: 0
 
 ---
 *Requirements defined: 2026-02-28*
-*Last updated: 2026-03-01 after 04-01 completion (AUTH-07 complete)*
+*Last updated: 2026-03-01 after 05-01 completion (AUTH-05, BULK-01 complete — all v1 requirements satisfied)*
