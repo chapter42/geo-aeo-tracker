@@ -162,7 +162,7 @@ export function PromptHubTab({
             {importResult !== null && (
               <p className="text-sm text-th-text-accent">
                 {importResult.skipped > 0
-                  ? `${importResult.added} van ${total} prompts toegevoegd, ${importResult.skipped} duplicaten overgeslagen`
+                  ? `${importResult.added} van ${total} prompts toegevoegd, ${importResult.skipped} ${importResult.skipped === 1 ? "duplicaat" : "duplicaten"} overgeslagen`
                   : `${importResult.added} prompts toegevoegd`}
               </p>
             )}
