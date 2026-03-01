@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
+import { verifySession } from "@/lib/auth";
 
 const bodySchema = z.object({
   url: z.string().url(),
@@ -38,6 +39,11 @@ async function tryFetch(url: string): Promise<{ ok: boolean; text: string; statu
 }
 
 export async function POST(req: NextRequest) {
+  const session = await verifySession();
+  if (!session) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
+
   try {
     const { url } = bodySchema.parse(await req.json());
     const target = new URL(url);

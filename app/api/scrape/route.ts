@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
 import { runAiScraper } from "@/lib/server/brightdata-scraper";
+import { verifySession } from "@/lib/auth";
 
 const InputSchema = z.object({
   provider: z.enum([
@@ -17,6 +18,11 @@ const InputSchema = z.object({
 });
 
 export async function POST(req: NextRequest) {
+  const session = await verifySession();
+  if (!session) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
+
   try {
     const body = await req.json();
     const parsed = InputSchema.parse(body);
