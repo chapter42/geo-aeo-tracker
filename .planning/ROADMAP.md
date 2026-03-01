@@ -14,6 +14,8 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Core Auth Gate** - Fully working password gate with defense-in-depth API protection and zero upstream file modifications
 - [ ] **Phase 2: Login UX** - Styled login page matching the app's existing Tailwind dark theme
+- [ ] **Phase 4: Login Page Styling** - Style login page to match app theme (gap closure for AUTH-07)
+- [ ] **Phase 5: API Defense-in-Depth & Prompt Cap Fix** - Add verifySession to API routes, remove 50-prompt cap (gap closure for AUTH-05, BULK-01)
 
 ## Phase Details
 
@@ -55,13 +57,37 @@ Plans:
 Plans:
 - [ ] 03-01-PLAN.md — Bulk import UI: toggle button, textarea, parsing/dedup logic, summary feedback
 
+### Phase 4: Login Page Styling
+**Goal**: The login page uses the app's color palette, typography, and component styling so it looks cohesive with the dashboard — not a bare default form
+**Depends on**: Phase 1 (login page exists)
+**Requirements**: AUTH-07
+**Gap Closure**: Closes AUTH-07 from v1.0 audit (Phase 2 was never executed)
+**Success Criteria** (what must be TRUE):
+  1. The login page uses the same background color, text colors, and accent colors as the main dashboard (th-* CSS custom properties)
+  2. The login form inputs and button use the app's existing CSS classes (bd-input, bd-btn-primary)
+  3. The login page is visually distinct from a bare browser default
+**Plans**: TBD
+
+### Phase 5: API Defense-in-Depth & Prompt Cap Fix
+**Goal**: API route handlers independently verify session cookies (true defense-in-depth beyond proxy), and the 50-prompt cap is removed to match BULK-01's "no limit" requirement
+**Depends on**: Phase 1 (verifySession exists in lib/auth.ts)
+**Requirements**: AUTH-05, BULK-01
+**Gap Closure**: Closes AUTH-05 partial (verifySession unused) and BULK-01 integration gap (50-prompt cap) from v1.0 audit
+**Success Criteria** (what must be TRUE):
+  1. Each API route handler (/api/scrape, /api/audit, /api/analyze) calls verifySession() and returns 401 if invalid — independent of proxy
+  2. The .slice(0, 50) cap on customPrompts in sovereign-dashboard.tsx is removed
+  3. Bulk import can add more than 50 prompts without silent truncation
+**Plans**: TBD
+
 ## Progress
 
 **Execution Order:**
-Phases execute in numeric order: 1 → 2 → 3
+Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Core Auth Gate | 2/2 | Complete | 2026-02-28 |
 | 2. Login UX | 0/TBD | Not started | - |
 | 3. Bulk Prompt Import | 1/1 | Complete   | 2026-03-01 |
+| 4. Login Page Styling | 0/TBD | Not started | - |
+| 5. API Defense & Prompt Cap | 0/TBD | Not started | - |
