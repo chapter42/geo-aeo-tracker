@@ -47,14 +47,14 @@ function LoginForm() {
 
   return (
     <div className="flex items-center justify-center min-h-screen">
-      <div className="p-8 rounded-lg max-w-sm w-full border border-gray-700 bg-gray-900">
-        <h1 className="text-xl font-semibold mb-6 text-white">Sign in</h1>
+      <div className="bd-panel rounded-lg p-8 max-w-sm w-full">
+        <h1 className="text-xl font-semibold mb-6 text-th-text">Sign in</h1>
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <label
               htmlFor="password"
-              className="block text-sm font-medium text-gray-300 mb-1"
+              className="block text-sm font-medium text-th-text-secondary mb-1"
             >
               Password
             </label>
@@ -65,19 +65,19 @@ function LoginForm() {
               onChange={(e) => setPassword(e.target.value)}
               required
               autoFocus
-              className="w-full px-3 py-2 border border-gray-600 rounded-md bg-gray-800 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="bd-input w-full rounded-md px-3 py-2"
               placeholder="Enter password"
             />
           </div>
 
           {error && (
-            <p className="text-red-500 text-sm">{error}</p>
+            <p className="text-th-danger text-sm">{error}</p>
           )}
 
           <button
             type="submit"
             disabled={loading}
-            className="w-full py-2 px-4 bg-blue-600 hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed text-white font-medium rounded-md transition-colors"
+            className="bd-btn-primary w-full rounded-md py-2 px-4 disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {loading ? 'Signing in...' : 'Log in'}
           </button>
@@ -93,7 +93,7 @@ function LoginForm() {
  */
 export default function LoginPage() {
   return (
-    <Suspense fallback={<div className="flex items-center justify-center min-h-screen text-gray-400">Loading...</div>}>
+    <Suspense fallback={<div className="flex items-center justify-center min-h-screen text-th-text-muted">Loading...</div>}>
       <LoginForm />
     </Suspense>
   )
