@@ -3,12 +3,12 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: unknown
-last_updated: "2026-03-01T12:52:03.310Z"
+last_updated: "2026-03-01T13:04:57.038Z"
 progress:
-  total_phases: 4
-  completed_phases: 3
-  total_plans: 4
-  completed_plans: 4
+  total_phases: 5
+  completed_phases: 5
+  total_plans: 5
+  completed_plans: 5
 ---
 
 # Project State
@@ -18,16 +18,16 @@ progress:
 See: .planning/PROJECT.md (updated 2026-02-28)
 
 **Core value:** The whole app is gated behind a shared password — no unauthenticated access to any page or API route
-**Current focus:** Phase 4 complete — login page styling (AUTH-07 gap closure) delivered
+**Current focus:** Phase 5 complete — API defense-in-depth (AUTH-05) and prompt cap fix (BULK-01) delivered
 
 ## Current Position
 
-Phase: 4 of 5 (Login Page Styling)
-Plan: 1 of 1 in current phase (Phase 4 complete)
-Status: Phase 4 complete — AUTH-07 closed, Phase 5 pending
-Last activity: 2026-03-01 — Plan 04-01 completed
+Phase: 5 of 5 (API Defense-in-Depth & Prompt Cap Fix)
+Plan: 1 of 1 in current phase (Phase 5 complete)
+Status: ALL PHASES COMPLETE — v1.0 milestone achieved
+Last activity: 2026-03-01 — Plan 05-01 completed
 
-Progress: [████████░░] 80%
+Progress: [██████████] 100%
 
 ## Performance Metrics
 
@@ -43,10 +43,11 @@ Progress: [████████░░] 80%
 | 01-core-auth-gate | 2 | 7min | 4min |
 | 03-bulk-prompt-import | 1 | 10min | 10min |
 | 04-login-page-styling | 1 | 42min | 42min |
+| 05-api-defense-in-depth-and-prompt-cap-fix | 1 | 2min | 2min |
 
 **Recent Trend:**
-- Last 5 plans: 2min, 5min, 10min, 42min
-- Trend: Longer (visual verification checkpoint included)
+- Last 5 plans: 2min, 5min, 10min, 42min, 2min
+- Trend: Fast — surgical changes only, no new dependencies
 
 *Updated after each plan completion*
 
@@ -77,6 +78,8 @@ Recent decisions affecting current work:
 - [03-01]: Dutch singular/plural: "1 duplicaat" vs "N duplicaten" (auto-fixed during Task 1)
 - [04-01]: bd-panel provides card background + border + shadow — do not add bg-th-card or border-th-border alongside it
 - [04-01]: bd-input owns all focus styling — do not add focus:ring-* or focus:border-* Tailwind utilities on top of bd-input
+- [Phase 05-01]: verifySession() is safe in edge runtime — jose and next/headers cookies() are both edge-compatible
+- [Phase 05-01]: Only the addCustomPrompt .slice(0,50) removed — citationLeaders useMemo .slice(0,50) intentionally kept
 
 ### Pending Todos
 
@@ -88,10 +91,10 @@ None.
 
 ### Blockers/Concerns
 
-None — Phase 5 (API Defense-in-Depth & Prompt Cap Fix) is next.
+None — all phases complete, v1.0 milestone achieved.
 
 ## Session Continuity
 
 Last session: 2026-03-01
-Stopped at: Completed 04-01-PLAN.md — login page styling complete (AUTH-07 closed, human-verified in dark and light themes)
+Stopped at: Completed 05-01-PLAN.md — API defense-in-depth and prompt cap fix complete (AUTH-05 and BULK-01 closed)
 Resume file: None

@@ -15,7 +15,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 1: Core Auth Gate** - Fully working password gate with defense-in-depth API protection and zero upstream file modifications
 - [ ] **Phase 2: Login UX** - Styled login page matching the app's existing Tailwind dark theme
 - [ ] **Phase 4: Login Page Styling** - Style login page to match app theme (gap closure for AUTH-07)
-- [ ] **Phase 5: API Defense-in-Depth & Prompt Cap Fix** - Add verifySession to API routes, remove 50-prompt cap (gap closure for AUTH-05, BULK-01)
+- [x] **Phase 5: API Defense-in-Depth & Prompt Cap Fix** - Add verifySession to API routes, remove 50-prompt cap (gap closure for AUTH-05, BULK-01) (completed 2026-03-01)
 
 ## Phase Details
 
@@ -92,4 +92,4 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | 2. Login UX | 0/TBD | Not started | - |
 | 3. Bulk Prompt Import | 1/1 | Complete   | 2026-03-01 |
 | 4. Login Page Styling | 1/1 | Complete | 2026-03-01 |
-| 5. API Defense & Prompt Cap | 0/TBD | Not started | - |
+| 5. API Defense & Prompt Cap | 1/1 | Complete   | 2026-03-01 |
