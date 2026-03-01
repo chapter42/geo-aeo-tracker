@@ -5,11 +5,11 @@
    Inspired by Promptwatch — clean, professional
    ═══════════════════════════════════════════════════ */
 :root {
-  --background: #f8fafc;
-  --foreground: #0f172a;
+  --background: #F9F5F0;
+  --foreground: #002C48;
 
   /* Surfaces */
-  --th-bg: #f1f5f9;
+  --th-bg: #F2ECE1;
   --th-card: #ffffff;
   --th-card-alt: #f8fafc;
   --th-card-hover: #f1f5f9;
@@ -17,10 +17,10 @@
   --th-inset: #f1f5f9;
 
   /* Text */
-  --th-text: #0f172a;
+  --th-text: #002C48;
   --th-text-secondary: #475569;
   --th-text-muted: #94a3b8;
-  --th-text-accent: #2563eb;
+  --th-text-accent: #FF3349;
   --th-text-inverse: #ffffff;
 
   /* Borders */
@@ -29,14 +29,14 @@
   --th-ring: rgba(59, 130, 246, 0.25);
 
   /* Accent */
-  --th-accent: #3b82f6;
-  --th-accent-hover: #2563eb;
+  --th-accent: #FF3349;
+  --th-accent-hover: #FF3349;
   --th-accent-soft: rgba(59, 130, 246, 0.08);
   --th-accent-muted: rgba(59, 130, 246, 0.15);
 
   /* Brand highlight */
   --th-brand-bg: rgba(59, 130, 246, 0.1);
-  --th-brand-text: #2563eb;
+  --th-brand-text: #FF3349;
   --th-competitor-bg: rgba(234, 88, 12, 0.1);
   --th-competitor-text: #ea580c;
 
@@ -56,10 +56,10 @@
   --th-border-hover: #cbd5e1;
 
   /* Chart */
-  --th-chart-line: #3b82f6;
+  --th-chart-line: #FF3349;
   --th-chart-grid: rgba(0, 0, 0, 0.06);
-  --th-chart-dot: #2563eb;
-  --th-chart-axis: #64748b;
+  --th-chart-dot: #FF3349;
+  --th-chart-axis: #807C77;
 
   /* Score ring bg */
   --th-score-ring-bg: #e2e8f0;
@@ -73,7 +73,7 @@
    Refined navy palette — no neon, softer blues
    ═══════════════════════════════════════════════════ */
 .dark {
-  --background: #0b1121;
+  --background: #001726;
   --foreground: #e2e8f0;
 
   --th-bg: #0b1121;
@@ -86,20 +86,20 @@
   --th-text: #e2e8f0;
   --th-text-secondary: #94a3b8;
   --th-text-muted: #64748b;
-  --th-text-accent: #60a5fa;
+  --th-text-accent: #FF3349;
   --th-text-inverse: #0f172a;
 
   --th-border: #1e293b;
   --th-border-subtle: rgba(30, 41, 59, 0.6);
   --th-ring: rgba(96, 165, 250, 0.25);
 
-  --th-accent: #3b82f6;
-  --th-accent-hover: #60a5fa;
+  --th-accent: #FF3349;
+  --th-accent-hover: ##FF3349;
   --th-accent-soft: rgba(59, 130, 246, 0.12);
   --th-accent-muted: rgba(59, 130, 246, 0.2);
 
   --th-brand-bg: rgba(96, 165, 250, 0.12);
-  --th-brand-text: #60a5fa;
+  --th-brand-text: ##FF3349;
   --th-competitor-bg: rgba(251, 146, 60, 0.12);
   --th-competitor-text: #fb923c;
 
